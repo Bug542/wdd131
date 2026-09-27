@@ -1,16 +1,24 @@
-let selectElem = document.querySelector('select');
-let logo = document.querySelector('img');
+let selectElem = document.querySelector("select");
+let logo = document.querySelector("img");
 
-selectElem.addEventListener('change', changeTheme);
+selectElem.addEventListener("change", changeTheme);
 
 function changeTheme() {
     let current = selectElem.value;
 
-    if (current == 'dark') {
-        document.body.classList.add('dark');
-        logo.src = 'https://wddbyui.github.io/wdd131/images/byui-logo-white.png';
+    if (current === "dark") {
+        document.body.classList.add("dark");
+
+        logo.setAttribute(
+            "src",
+            "https://wddbyui.github.io/wdd131/images/byui-logo-white.png"
+        );
     } else {
-        document.body.classList.remove('dark');
-        logo.src = 'https://wddbyui.github.io/wdd131/images/byui-logo-blue.webp';
+        document.body.classList.remove("dark");
+
+        logo.setAttribute(
+            "src",
+            "https://wddbyui.github.io/wdd131/images/byui-logo-blue.webp"
+        );
     }
 }
