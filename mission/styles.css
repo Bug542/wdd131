@@ -1,9 +1,9 @@
 body {
     font-family: "Times New Roman", Times, serif;
+    background-color: white;
+    color: black;
     margin: 0;
     padding: 40px;
-    background-color: white;
-    color: #222;
 }
 
 .content {
@@ -13,44 +13,45 @@ body {
     border: 1px solid #ccc;
 }
 
+select {
+    display: block;
+    margin: 0 0 30px auto;
+    padding: 5px;
+}
+
 header {
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 h1 {
-    font-size: 38px;
+    font-size: 2rem;
     font-weight: normal;
-    letter-spacing: 2px;
     margin-bottom: 15px;
 }
 
 h2 {
-    font-size: 16px;
+    color: #006EB6;
+    font-size: 0.9rem;
     font-weight: normal;
-    letter-spacing: 3px;
-    color: #006eb6;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
     margin-bottom: 40px;
 }
 
 .mission {
-    font-size: 18px;
     line-height: 1.5;
+    font-size: 1rem;
 }
 
 .mission p {
     margin-bottom: 20px;
 }
 
-.mission ul {
-    padding-left: 40px;
-}
-
 .mission li {
     margin-bottom: 20px;
-    padding-left: 5px;
+    padding-left: 15px;
 }
 
 footer {
@@ -61,4 +62,22 @@ footer {
 footer img {
     width: 150px;
     height: auto;
+}
+
+/* Dark mode */
+
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
+body.dark .content {
+    background-color: #333;
+    color: white;
+    border-color: #777;
+}
+
+body.dark h2 {
+    color: #7ec8ff;
+    border-color: #777;
 }
