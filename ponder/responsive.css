@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Mobile-first design */
+/* MOBILE FIRST */
 
 * {
   box-sizing: border-box;
@@ -62,7 +62,8 @@ footer {
   text-align: center;
 }
 
-/* Larger screens */
+
+/* TABLET */
 
 @media screen and (min-width: 700px) {
 
@@ -83,8 +84,14 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+}
 
-  section:first-child {
-    grid-column: 1 / 3;
+
+/* DESKTOP */
+
+@media screen and (min-width: 1000px) {
+
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
