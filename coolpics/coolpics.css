@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d3d3d3;
+}
+
+/* HEADER */
+
+header {
+    background-color: #287fe0;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+.menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Navigation starts hidden on mobile */
+
+nav {
+    display: none;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+/* PHOTO GALLERY */
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+}
+
+.gallery img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 2px 5px #555;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #287fe0;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* TABLET */
+
+@media screen and (min-width: 700px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1000px) {
+    .menu {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
