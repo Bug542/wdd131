@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive photo gallery with image modals">
+  <title>Responsive Gallery</title>
+  <link rel="stylesheet" href="gallery.css">
+  <script src="gallery.js" defer></script>
+</head>
+<body>
+  <header><h1>Responsive Gallery</h1></header>
+  <main>
+    <h2>Our Gallery</h2>
+    <div class="gallery">
+      <img src="images/book-sm.jpg" alt="Person reading a book" data-full="images/book-full.jpg" tabindex="0">
+      <img src="images/couch-sm.jpg" alt="Person sitting on a couch" data-full="images/couch-full.jpg" tabindex="0">
+      <img src="images/desk-sm.jpg" alt="Desk with a computer and coffee" data-full="images/desk-full.jpg" tabindex="0">
+      <img src="images/keyboard-sm.jpg" alt="Hands typing on a keyboard" data-full="images/keyboard-full.jpg" tabindex="0">
+      <img src="images/phone-sm.jpg" alt="Person using a smartphone" data-full="images/phone-full.jpg" tabindex="0">
+      <img src="images/sit-sm.jpg" alt="Person seated on a couch" data-full="images/sit-full.jpg" tabindex="0">
+    </div>
+  </main>
+  <dialog class="viewer" aria-label="Enlarged gallery image">
+    <button class="close-viewer" type="button" aria-label="Close image">X</button>
+    <img src="" alt="">
+  </dialog>
+  <footer><p>Responsive Gallery | WDD 131</p></footer>
+</body>
+</html>
