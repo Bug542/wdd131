@@ -53,7 +53,7 @@ function movieTemplate(movie) {
       <p class="genre"><strong>Genre:</strong> ${movie.genre}</p>
       <p class="rating">
         <strong>Rating:</strong>
-        <span role="img" aria-label="${movie.stars.length} out of 5 stars">${movie.stars}</span>
+        <span role="img" aria-label="${[...movie.stars].length} out of 5 stars">${movie.stars}</span>
       </p>
       <p class="description">${movie.description}</p>
     </article>
