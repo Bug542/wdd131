@@ -135,6 +135,10 @@ body {
   gap: 1.8rem;
 }
 
+.book-review + .book-review {
+  margin-top: 2.5rem;
+}
+
 .book-details {
   padding-right: 1.4rem;
   border-right: 1px solid var(--border-color);
