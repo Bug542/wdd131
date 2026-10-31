@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a ticket for an upcoming event.">
+  <title>Event Ticket</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="ticket-container">
+    <h1>Event Ticket</h1>
+
+    <form id="ticket-form" novalidate>
+      <div class="form-group">
+        <label for="first-name">First Name</label>
+        <input id="first-name" name="firstName" type="text" autocomplete="given-name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="last-name">Last Name</label>
+        <input id="last-name" name="lastName" type="text" autocomplete="family-name" required>
+      </div>
+
+      <div class="form-group full-width">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="ticket-type">Type</label>
+        <select id="ticket-type" name="ticketType" required>
+          <option value="">Choose one</option>
+          <option value="student">Student</option>
+          <option value="guest">Guest</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="event-date">Event Date</label>
+        <input id="event-date" name="eventDate" type="date" required>
+      </div>
+
+      <div id="extra-field" class="form-group full-width" hidden>
+        <label for="ticket-code" id="code-label">Student I#</label>
+        <input id="ticket-code" name="ticketCode" type="text">
+      </div>
+
+      <button class="full-width" type="submit">Create Ticket</button>
+    </form>
+
+    <div id="errors" role="alert" aria-live="polite"></div>
+    <section id="ticket-result" aria-live="polite" hidden>
+      <h2>Ticket Created</h2>
+      <p id="ticket-name"></p>
+      <p id="ticket-kind"></p>
+      <p id="ticket-date"></p>
+    </section>
+  </main>
+</body>
+</html>
