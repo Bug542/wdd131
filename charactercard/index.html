@@ -1,0 +1,23 @@
+# WDD 131 – Unit 04 Prove: Character Card
+
+This is a self-contained assignment project. The `character` JavaScript object contains `name`, `class`, `level`, `health`, and `image` properties, along with `attacked()` and `levelUp()` methods. Each button has a click event listener. Changes persist within the browser tab through `sessionStorage`, and the page reloads with the new statistics, as described in the rubric. A Reset button restores the starting stats.
+
+## Test locally
+
+1. Open `index.html` in a browser (or run VS Code Live Server).
+2. Click **Level Up +1**: level becomes 2.
+3. Click **Attack −20 HP**: health becomes 80.
+4. Click Attack four more times: health becomes 0, the death message appears, and the two main buttons become disabled.
+5. Click **Reset Character** to start again.
+
+## Deploy
+
+Place this whole `charactercard` folder at the root of your `wdd131` GitHub repository. Commit and push, then visit:
+
+https://bug542.github.io/wdd131/charactercard/
+
+If your username differs, update the `og:url` and `og:image`/`twitter:image` URLs in `index.html`.
+
+## Lighthouse
+
+Open your deployed site, press F12, choose **Lighthouse**, select **Desktop**, and run an audit. Aim for 95+ in Performance, Accessibility, Best Practices, and SEO. Your actual scores must be checked in the browser; the files themselves cannot certify a score.
