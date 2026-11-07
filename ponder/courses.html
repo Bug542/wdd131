@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Practice JavaScript objects by enrolling students in course sections.">
+  <title>Course Enrollment | WDD 131</title>
+  <script src="courses.js" defer></script>
+  <style>
+    :root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f5f7fb; color: #202b3d; }
+    main { max-width: 860px; margin: 3rem auto; padding: 2rem; background: #fff; border-radius: 12px; box-shadow: 0 4px 18px #182b4614; }
+    h1 { margin-bottom: .35rem; }
+    h2 { margin-top: 0; font-size: 1.1rem; color: #566278; font-weight: 500; }
+    .form-row { display: flex; flex-wrap: wrap; gap: .75rem; align-items: end; margin: 1.5rem 0 1rem; }
+    .field { display: grid; gap: .4rem; }
+    input { padding: .7rem; font: inherit; border: 1px solid #9ca6b5; border-radius: 6px; width: 170px; }
+    button { padding: .75rem 1rem; font: inherit; font-weight: bold; border: 0; border-radius: 6px; background: #154c83; color: white; cursor: pointer; }
+    button:hover { background: #103d69; }
+    button:focus-visible, input:focus-visible { outline: 3px solid #ffbd39; outline-offset: 2px; }
+    #message { min-height: 1.5em; margin: 0 0 1rem; }
+    .table-wrap { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; text-align: left; }
+    th, td { padding: .8rem; border-bottom: 1px solid #dce2ea; }
+    th { background: #e9f0f8; }
+    @media (max-width: 540px) { main { margin: 1rem; padding: 1rem; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 id="courseName"></h1>
+    <h2 id="courseCode"></h2>
+
+    <div class="form-row">
+      <div class="field">
+        <label for="sectionNumber">Section Number</label>
+        <input id="sectionNumber" type="number" min="1" step="1" placeholder="Enter 1 or 2">
+      </div>
+      <button id="enrollStudent" type="button">Enroll Student</button>
+    </div>
+    <p id="message" role="status" aria-live="polite"></p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Section#</th>
+            <th scope="col">Room#</th>
+            <th scope="col">#Enrolled</th>
+            <th scope="col">Days</th>
+            <th scope="col">Instructor</th>
+          </tr>
+        </thead>
+        <tbody id="sections"></tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>
