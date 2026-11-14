@@ -1,0 +1,123 @@
+/* Week 9 Ponder: responsive layouts using Flexbox */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1280px;
+  margin: auto;
+  padding: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #252525;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.main-nav a {
+  color: #154d77;
+  text-decoration: none;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.media-card-container {
+  flex: 1 1 340px;
+  min-width: 0;
+}
+
+.gallery-container {
+  flex: 2 1 560px;
+  min-width: 0;
+}
+
+.media-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #d6dce2;
+  border-radius: 8px;
+}
+
+.media-card-image {
+  flex: 0 0 auto;
+}
+
+.media-card-image img {
+  width: 100%;
+}
+
+.media-card-content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.media-card-content h3 {
+  margin-top: 0;
+}
+
+.media-card-content p {
+  margin-bottom: 0;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery > .media-card {
+  flex: 1 1 250px;
+}
+
+hr {
+  margin-top: 50px;
+  border: 0;
+  border-top: 1px solid #d6dce2;
+}
+
+@media (min-width: 700px) {
+  .media-card-container > .media-card {
+    flex-direction: row;
+  }
+
+  .media-card-container > .media-card .media-card-image {
+    flex: 0 0 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-nav {
+    justify-content: center;
+  }
+}
