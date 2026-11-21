@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search and sort local hikes by name, description, and tags.">
+  <title>Hike Finder | Sorting and Filtering</title>
+  <link rel="stylesheet" href="sortfilter.css">
+  <script src="hikes.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <p class="eyebrow">WDD 131 · Week 10 Ponder</p>
+      <h1>Find Your Next Hike</h1>
+      <p>Explore hikes near Yellowstone and the Tetons. Search by trail name, description, or tag.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="search-panel" aria-labelledby="search-heading">
+      <h2 id="search-heading">Search hikes</h2>
+      <form id="hike-search" role="search">
+        <label for="search">Trail name, keyword, or tag</label>
+        <div class="search-row">
+          <input id="search" name="search" type="search" placeholder="Try waterfall, canyon, Yellowstone..." autocomplete="off">
+          <button class="search-button" type="submit">Search</button>
+        </div>
+      </form>
+      <p class="hint">Results are sorted by distance, shortest first. Click a tag to search for it.</p>
+    </section>
+
+    <section class="results" aria-labelledby="results-heading">
+      <div class="results-heading">
+        <h2 id="results-heading">Hikes</h2>
+        <p id="results-count" role="status" aria-live="polite"></p>
+      </div>
+      <div id="hike-container" class="hike-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>WDD 131 · Sort and Filter Practice</p>
+  </footer>
+</body>
+</html>
