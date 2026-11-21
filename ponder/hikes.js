@@ -116,7 +116,6 @@ function difficultyTemplate(difficulty) {
 
 function hikeTemplate(hike) {
   return `<article class="hike-card">
-    <img src="${hike.imgSrc}" alt="${hike.imgAlt}" loading="lazy">
     <div class="hike-content">
       <div class="hike-title-row">
         <h3>${hike.name}</h3>
